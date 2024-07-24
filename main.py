@@ -15,27 +15,144 @@ driver = webdriver.Chrome(
     options=opts
 )
 
+#PRODUCTOS DESPENSA 
+def CategoriaDespensa(mostrar):
+    driver.get('https://acuenta.cl/ca/despensa/05')
+    sleep(20)
 
-#URL Categoria despensa 
-driver.get('https://acuenta.cl/ca/despensa/05')
-sleep(20)
+    #Mostrar nombre de los productos 
+    if mostrar == 'nombres':
+        try:
+            nombres = driver.find_elements(By.CLASS_NAME,'prod__name')
+            for nombre in nombres:
+                print(nombre.text)
+        except:
+            print("No se pudo completar")
+    
+    #Mostrar precio de los productos
+    elif mostrar == 'precios':
+        try:
+            precios = driver.find_elements(By.CLASS_NAME,'base__price')
+            for precio in precios:
+                print(f"Precio: {precio.text}")
+        except:
+            print("No se pudo completar")
 
-#Obteniendo Nombre de los Productos
-def ObteniendoNombres():
-    try:
-        nombres = driver.find_elements(By.CLASS_NAME,'prod__name')
-        for nombre in nombres:
-            print(nombre.text)
-    except:
-        print("No se pudo completar")
+#PRODUCTOS CARNES Y PESCADOS
+def CategoriaCarnes(mostrar):
+    driver.get('https://acuenta.cl/ca/carnes-y-pescados/03')
+    sleep(20)
 
-#Obteniendo Precios de los productos 
-def ObteniendoPrecios():
-    try:
-        precios = driver.find_elements(By.CLASS_NAME,'base__price')
-        for precio in precios:
-            print(precio.text)
-    except:
-        print("No se pudo completar")
+    #Mostrar nombre de los productos 
+    if mostrar == 'nombres':
+        try:
+            nombres = driver.find_elements(By.CLASS_NAME,'prod__name')
+            for nombre in nombres:
+                print(nombre.text)
+        except:
+            print("No se pudo completar")
+    
+    #Mostrar precio de los productos
+    elif mostrar == 'precios':
+        try:
+            precios = driver.find_elements(By.CLASS_NAME,'base__price')
+            for precio in precios:
+                print(f"Precio: {precio.text}")
+        except:
+            print("No se pudo completar")
 
-ObteniendoPrecios()
+#PRODUCTOS FRESCOS Y LACTEOS 
+def CategoriaFrescos(mostrar):
+    driver.get('https://acuenta.cl/ca/frescos-y-lacteos/07')
+    sleep(20)
+
+    #Mostrar nombre de los productos 
+    if mostrar == 'nombres':
+        try:
+            nombres = driver.find_elements(By.CLASS_NAME,'prod__name')
+            for nombre in nombres:
+                print(nombre.text)
+        except:
+            print("No se pudo completar")
+    
+    #Mostrar precio de los productos
+    elif mostrar == 'precios':
+        try:
+            precios = driver.find_elements(By.CLASS_NAME,'base__price')
+            for precio in precios:
+                print(f"Precio: {precio.text}")
+        except:
+            print("No se pudo completar")
+
+#PRODUCTOS BEBIDAS Y LICORES
+def CategoriaBebidas(mostrar):
+    driver.get('https://acuenta.cl/ca/bebidas-y-licores/02')
+    sleep(20)
+
+    #Mostrar nombre de los productos 
+    if mostrar == 'nombres':
+        try:
+            nombres = driver.find_elements(By.CLASS_NAME,'prod__name')
+            for nombre in nombres:
+                print(nombre.text)
+        except:
+            print("No se pudo completar")
+    
+    #Mostrar precio de los productos
+    elif mostrar == 'precios':
+        try:
+            precios = driver.find_elements(By.CLASS_NAME,'base__price')
+            for precio in precios:
+                print(f"Precio: {precio.text}")
+        except:
+            print("No se pudo completar")
+
+#PRODUCTOS ASEO Y LIMPIEZA
+def CategoriaLimpieza(mostrar):
+    driver.get('https://acuenta.cl/ca/aseo-y-limpieza/11')
+    sleep(20)
+
+    #Mostrar nombre de los productos 
+    if mostrar == 'nombres':
+        try:
+            nombres = driver.find_elements(By.CLASS_NAME,'prod__name')
+            for nombre in nombres:
+                print(nombre.text)
+        except:
+            print("No se pudo completar")
+    
+    #Mostrar precio de los productos
+    elif mostrar == 'precios':
+        try:
+            precios = driver.find_elements(By.CLASS_NAME,'base__price')
+            for precio in precios:
+                print(f"Precio: {precio.text}")
+        except:
+            print("No se pudo completar")
+
+
+#PRODUCTOS FRUTAS Y VERDURAS
+def CategoriaFrutas(mostrar):
+    driver.get('https://acuenta.cl/ca/frutas-y-verduras/06')
+    sleep(20)
+
+    #Mostrar nombre de los productos 
+    if mostrar == 'nombres':
+        try:
+            nombres = driver.find_elements(By.CLASS_NAME,'prod__name')
+            for nombre in nombres:
+                print(nombre.text)
+        except:
+            print("No se pudo completar")
+    
+    #Mostrar precio de los productos
+    elif mostrar == 'precios':
+        try:
+            precios = driver.find_elements(By.CLASS_NAME,'base__price')
+            for precio in precios:
+                print(f"Precio: {precio.text}")
+        except:
+            print("No se pudo completar")
+
+
+CategoriaBebidas('nombres')
